@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>p5.js Starter Project</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kalorientracker</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-	<form action="">
-		<input type="text" id="input" name="content">
-		<button id="button" name="button">Click me</button>
-	</form>
-    <div id="sketch"></div>
-    <a href="index.js">souce code</a>
-    </main>
-    <script src="lib/p5.min.js"></script>
+	<main>
+		<h1>Kalorientracker</h1>
 
-    <script src="index.js"></script>
+		<section class="tracker">
+			<table id="kalorien-tabelle">
+				<thead>
+					<tr>
+						<th>Lebensmittel</th>
+						<th>Menge</th>
+						<th>Kalorien</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Dynamische Einträge -->
+				</tbody>
+			</table>
+		</section>
+
+		<form id="kalorien-form">
+			<input type="text" name="name" placeholder="Gib hier an was du gegessen hast" required>
+			<button type="submit">Hinzufügen</button>
+		</form>
+	</main>
+
+	<script src="index.js"></script>
 </body>
 </html>
