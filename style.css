@@ -96,33 +96,13 @@ tbody tr:hover {
   background-color: #d32f2f;
 }
 
-/* Mobile Optimierung */
+/* MOBIL: nur wichtige Spalten anzeigen     */
+
 @media (max-width: 600px) {
-  /* Spalten ausblenden */
   .col-menge,
   .col-kh,
   .col-fett {
     display: none;
-  }
-
-  /* Überschriften kürzen */
-  .col-kcal::before { content: 'kcal'; }
-  .col-ew::before { content: 'Eiweiß'; }
-  .col-aktion::before { content: 'Löschen'; }
-
-  .col-kcal,
-  .col-ew,
-  .col-aktion {
-    color: transparent;
-    position: relative;
-  }
-
-  .col-kcal::before,
-  .col-ew::before,
-  .col-aktion::before {
-    color: black;
-    position: absolute;
-    left: 0;
   }
 
   th, td {
@@ -144,6 +124,7 @@ tbody tr:hover {
   }
 }
 
+/* Desktop: alles sichtbar                  */
 @media (min-width: 700px) {
   form {
     flex-direction: row;
