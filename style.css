@@ -99,7 +99,7 @@ tbody tr:hover {
 }
 
 /* ========================================== */
-/* 📱 MOBILE (bis 600px Breite)               */
+/*  MOBILE (bis 600px Breite)               */
 /* ========================================== */
 @media (max-width: 600px) {
   /* Spalten ausblenden */
@@ -172,7 +172,7 @@ tbody tr:hover {
 }
 
 /* ========================================== */
-/* 🖥️ DESKTOP (> 700px Breite)                */
+/*  DESKTOP (> 700px Breite)                */
 /* ========================================== */
 @media (min-width: 700px) {
   form {
