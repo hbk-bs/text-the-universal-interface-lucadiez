@@ -64,6 +64,7 @@ form button:hover {
 table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 th, td {
@@ -71,6 +72,7 @@ th, td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
   font-size: 0.95rem;
+  word-break: break-word;
 }
 
 thead {
@@ -97,67 +99,80 @@ tbody tr:hover {
 }
 
 /* ========================================== */
-/*  MOBIL: optimiert für 320–600px Breite   */
+/* 📱 MOBILE (bis 600px Breite)               */
 /* ========================================== */
 @media (max-width: 600px) {
-  /* Nur wichtige Spalten anzeigen */
+  /* Spalten ausblenden */
   .col-menge,
   .col-kh,
   .col-fett {
     display: none;
   }
 
-  /* Kompaktere Zellen */
+  /* Schmalere Zellen, weniger Padding, kleinere Schrift */
   th, td {
-    padding: 4px 6px;
-    font-size: 0.75rem;
+    padding: 4px;
+    font-size: 0.7rem;
   }
 
-  /* Kompaktes Formular */
-  form {
-    flex-direction: column;
-    gap: 4px;
+  thead th {
+    font-size: 0.7rem;
+    font-weight: 600;
   }
 
-  form input[type='text'],
-  form button,
-  #clear-table {
-    font-size: 0.85rem;
-    height: 32px;
-    padding: 4px 8px;
-  }
-
-  /* Button-Symbolgröße anpassen */
-  .col-aktion button {
-    font-size: 0.9rem;
-    padding: 4px 6px;
-  }
-
-  /* Tabellenübersicht nicht scrollbar */
-  table {
-    table-layout: fixed;
-  }
-
+  /* Spaltenbreite manuell festlegen */
   .col-name {
-    width: 40%;
-    word-break: break-word;
+    width: 42%;
   }
 
-  .col-kcal,
-  .col-ew,
-  .col-aktion {
+  .col-kcal {
+    width: 18%;
+    text-align: center;
+  }
+
+  .col-ew {
     width: 20%;
     text-align: center;
   }
 
-  /* Tabellenkopf fixieren (optional) */
-  thead th {
-    font-weight: 600;
+  .col-aktion {
+    width: 15%;
+    text-align: center;
+  }
+
+  /* Kompakter Button in "Aktion" */
+  .col-aktion button {
+    padding: 2px 4px;
+    font-size: 0.7rem;
+    border-radius: 4px;
+  }
+
+  /* Formular noch kompakter */
+  form {
+    gap: 4px;
+  }
+
+  form input[type='text'] {
+    height: 32px;
+    padding: 4px 8px;
+    font-size: 0.85rem;
+  }
+
+  form button,
+  #clear-table {
+    height: 32px;
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
+
+  main {
+    padding: 8px;
+    gap: 8px;
   }
 }
 
 /* ========================================== */
-/*  DESKTOP                                 */
+/* 🖥️ DESKTOP (> 700px Breite)                */
 /* ========================================== */
 @media (min-width: 700px) {
   form {
