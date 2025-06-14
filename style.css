@@ -96,35 +96,69 @@ tbody tr:hover {
   background-color: #d32f2f;
 }
 
-/* MOBIL: nur wichtige Spalten anzeigen     */
-
+/* ========================================== */
+/*  MOBIL: optimiert für 320–600px Breite   */
+/* ========================================== */
 @media (max-width: 600px) {
+  /* Nur wichtige Spalten anzeigen */
   .col-menge,
   .col-kh,
   .col-fett {
     display: none;
   }
 
+  /* Kompaktere Zellen */
   th, td {
-    padding: 6px;
-    font-size: 0.8rem;
+    padding: 4px 6px;
+    font-size: 0.75rem;
   }
 
+  /* Kompaktes Formular */
   form {
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
   }
 
   form input[type='text'],
   form button,
   #clear-table {
+    font-size: 0.85rem;
+    height: 32px;
+    padding: 4px 8px;
+  }
+
+  /* Button-Symbolgröße anpassen */
+  .col-aktion button {
     font-size: 0.9rem;
-    height: 36px;
-    padding: 6px;
+    padding: 4px 6px;
+  }
+
+  /* Tabellenübersicht nicht scrollbar */
+  table {
+    table-layout: fixed;
+  }
+
+  .col-name {
+    width: 40%;
+    word-break: break-word;
+  }
+
+  .col-kcal,
+  .col-ew,
+  .col-aktion {
+    width: 20%;
+    text-align: center;
+  }
+
+  /* Tabellenkopf fixieren (optional) */
+  thead th {
+    font-weight: 600;
   }
 }
 
-/* Desktop: alles sichtbar                  */
+/* ========================================== */
+/*  DESKTOP                                 */
+/* ========================================== */
 @media (min-width: 700px) {
   form {
     flex-direction: row;
