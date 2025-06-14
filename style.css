@@ -30,7 +30,6 @@ h1 {
   margin-bottom: 8px;
 }
 
-/* Formular-Styling */
 form {
   display: flex;
   flex-direction: column;
@@ -59,12 +58,10 @@ form button:hover {
   background-color: #45a049;
 }
 
-/* Tabelle scrollbar für Mobilgeräte */
 .table-wrapper {
   overflow-x: auto;
 }
 
-/* Tabellen-Styling */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -85,7 +82,6 @@ tbody tr:hover {
   background-color: #f1f1f1;
 }
 
-/* Button unter Tabelle */
 #clear-table {
   margin-top: 8px;
   padding: 10px;
@@ -101,8 +97,11 @@ tbody tr:hover {
   background-color: #d32f2f;
 }
 
-/* Media Query für größere Displays */
-@media (min-width: 600px) {
+.hide-on-small {
+  display: none;
+}
+
+@media (min-width: 700px) {
   form {
     flex-direction: row;
     align-items: center;
@@ -115,5 +114,9 @@ tbody tr:hover {
   form button {
     height: 40px;
     padding: 0 20px;
+  }
+
+  .hide-on-small {
+    display: table-cell;
   }
 }

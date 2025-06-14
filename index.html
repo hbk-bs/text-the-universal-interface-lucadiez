@@ -11,38 +11,41 @@
 		<h1>Kalorientracker</h1>
 
 		<section class="tracker">
-			<table id="kalorien-tabelle">
-				<thead>
-					<tr>
-						<th>Lebensmittel</th>
-						<th>Menge</th>
-						<th>Kalorien</th>
-						<th>Kohlenhydrate (g)</th>
-						<th>Eiweiß (g)</th>
-						<th>Fett (g)</th>
-						<th>Aktion</th>
-					</tr>
-				</thead>
-				<tbody>
-					<!-- Dynamische Einträge -->
-				</tbody>
-				<tfoot>
-					<tr>
-						<th colspan="2">Gesamt</th>
-						<th id="sum-kcal">0</th>
-						<th id="sum-kohlenhydrate">0</th>
-						<th id="sum-eiweiss">0</th>
-						<th id="sum-fett">0</th>
-						<th></th>
-					</tr>
-				</tfoot>
-			</table>
+			<div class="table-wrapper">
+				<table id="kalorien-tabelle">
+					<thead>
+						<tr>
+							<th>Lebensmittel</th>
+							<th class="hide-on-small">Menge</th>
+							<th>Kalorien</th>
+							<th class="hide-on-small">Kohlenhydrate (g)</th>
+							<th>Eiweiß (g)</th>
+							<th class="hide-on-small">Fett (g)</th>
+							<th>Aktion</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Dynamische Einträge -->
+					</tbody>
+					<tfoot>
+						<tr>
+							<th colspan="1">Gesamt</th>
+							<th class="hide-on-small"></th>
+							<th id="sum-kcal">0</th>
+							<th class="hide-on-small" id="sum-kohlenhydrate">0</th>
+							<th id="sum-eiweiss">0</th>
+							<th class="hide-on-small" id="sum-fett">0</th>
+							<th></th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
 			<button id="clear-table">Tabelle leeren</button>
 		</section>
 
 		<form id="kalorien-form">
 			<input type="text" name="name" placeholder="Was hast du gegessen?" required>
-			<button type="submit">Hinzufügen</button>
+			<button type="submit" id="submit-button">Hinzufügen</button>
 		</form>
 	</main>
 
