@@ -107,8 +107,8 @@ tbody tr:hover {
 
   /* Überschriften kürzen */
   .col-kcal::before { content: 'kcal'; }
-  .col-ew::before { content: 'EW'; }
-  .col-aktion::before { content: 'X'; }
+  .col-ew::before { content: 'Eiweiß'; }
+  .col-aktion::before { content: 'Löschen'; }
 
   .col-kcal,
   .col-ew,
