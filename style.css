@@ -12,7 +12,7 @@ html, body {
 
 main {
   width: 100%;
-  max-width: 700px;
+  max-width: 950px;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
@@ -174,7 +174,7 @@ tbody tr:hover {
 /* ========================================== */
 /*  DESKTOP (> 700px Breite)                */
 /* ========================================== */
-@media (min-width: 700px) {
+@media (min-width: 601px) {
   form {
     flex-direction: row;
     align-items: center;
@@ -188,4 +188,13 @@ tbody tr:hover {
     height: 40px;
     padding: 0 20px;
   }
+
+/* Desktop: Inhalte sollen in Zellen bleiben und bei Platzmangel abgeschnitten werden */
+th, td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+}
+
