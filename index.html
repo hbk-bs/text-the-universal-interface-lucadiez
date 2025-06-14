@@ -1,54 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Kalorientracker</title>
-	<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalorientracker</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<main>
-		<h1>Kalorientracker</h1>
+  <main>
+    <h1>Kalorientracker</h1>
 
-		<section class="tracker">
-			<div class="table-wrapper">
-				<table id="kalorien-tabelle">
-					<thead>
-						<tr>
-							<th>Lebensmittel</th>
-							<th class="hide-on-small">Menge</th>
-							<th>Kalorien</th>
-							<th class="hide-on-small">Kohlenhydrate (g)</th>
-							<th>Eiweiß (g)</th>
-							<th class="hide-on-small">Fett (g)</th>
-							<th>Aktion</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- Dynamische Einträge -->
-					</tbody>
-					<tfoot>
-						<tr>
-							<th colspan="1">Gesamt</th>
-							<th class="hide-on-small"></th>
-							<th id="sum-kcal">0</th>
-							<th class="hide-on-small" id="sum-kohlenhydrate">0</th>
-							<th id="sum-eiweiss">0</th>
-							<th class="hide-on-small" id="sum-fett">0</th>
-							<th></th>
-						</tr>
-					</tfoot>
-				</table>
-			</div>
-			<button id="clear-table">Tabelle leeren</button>
-		</section>
+    <section class="tracker">
+      <div class="table-wrapper">
+        <table id="kalorien-tabelle">
+          <thead>
+            <tr>
+              <th class="col-name">Lebensmittel</th>
+              <th class="col-menge">Menge</th>
+              <th class="col-kcal">Kalorien</th>
+              <th class="col-kh">Kohlenhydrate</th>
+              <th class="col-ew">Eiweiß</th>
+              <th class="col-fett">Fett</th>
+              <th class="col-aktion">Aktion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dynamische Einträge -->
+          </tbody>
+          <tfoot>
+            <tr>
+              <th class="col-name">Gesamt</th>
+              <th class="col-menge"></th>
+              <th class="col-kcal" id="sum-kcal">0</th>
+              <th class="col-kh" id="sum-kohlenhydrate">0</th>
+              <th class="col-ew" id="sum-eiweiss">0</th>
+              <th class="col-fett" id="sum-fett">0</th>
+              <th class="col-aktion"></th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <button id="clear-table">Tabelle leeren</button>
+    </section>
 
-		<form id="kalorien-form">
-			<input type="text" name="name" placeholder="Was hast du gegessen?" required>
-			<button type="submit" id="submit-button">Hinzufügen</button>
-		</form>
-	</main>
+    <form id="kalorien-form">
+      <input type="text" name="name" placeholder="Was hast du gegessen?" required />
+      <button type="submit" id="submit-button">Hinzufügen</button>
+    </form>
+  </main>
 
-	<script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
